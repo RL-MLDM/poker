@@ -23,7 +23,7 @@ class State:
             'position': self.position,
             'action_position': self.action_position,
             'legal_actions': [str(action_type) for action_type in self.legal_actions],
-            'raise_range': list(self.raise_range) if self.raise_range else None,
+            'raise_range': list(self.raise_range) if self.raise_range else [],
             'private_card': [card.json() for card in self.private_card],
             'public_card': [card.json() for card in self.public_card],
             'players': [player.json() for player in self.players],

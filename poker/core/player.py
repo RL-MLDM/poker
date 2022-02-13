@@ -62,7 +62,7 @@ class PlayerResult(PlayerBase):
         return {
             'position': self.position,
             'win_money': self.win_chip,
-            'moneyLeft': self.chip_left,
-            'totalMoney': self.init_chip,
+            'money_left': self.chip_left,
+            'total_money': self.init_chip,
             'name': self.name
         }

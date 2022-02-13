@@ -16,7 +16,7 @@ class Result:
     def json(self):
         return {
             'info': 'result',
-            'player_card': [[card.json() for card in cards] if cards else None for cards in self.private_card],
+            'player_card': [[card.json() for card in cards] if cards else [] for cards in self.private_card],
             'public_card': [card.json() for card in self.public_card],
             'players': [player.json() for player in self.players],
             'action_history': [[step.json() for step in stage] for stage in self.history]

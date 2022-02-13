@@ -3,7 +3,7 @@ SUITS_ORIGINAL = 'CDHS'
 
 
 def to_string(cards):
-    return [str(cd) for cd in cards]
+    return [str(cd).upper() for cd in cards]
 
 
 def get_winner(player_hands, table_cards):
