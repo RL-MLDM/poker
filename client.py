@@ -5,11 +5,9 @@ import socket
 
 server_ip = "127.0.0.1"                 # 德州扑克平台地址
 server_port = 2333                      # 德州扑克平台开放端口
-room_id = int(sys.argv[1])              # 进行对战的房间号
 room_number = int(sys.argv[2])          # 一局游戏人数
 name = sys.argv[3]                      # 当前程序的 AI 名字
 game_number = int(sys.argv[4])          # 最大对局数量
-bots = sys.argv[5:] if len(sys.argv) > 5 else []   # 需要系统额外添加的智能体名字
 
 
 def get_action(data):
@@ -40,7 +38,9 @@ def recvJson(request):
 if __name__ == "__main__":
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect((server_ip, server_port))
-    message = dict(info='connect', room_id=room_id, name=name, room_number=room_number, bots=bots,
+    message = dict(info='connect',
+                   name=name,
+                   room_number=room_number,
                    game_number=game_number)
     sendJson(client, message)
     while True:
