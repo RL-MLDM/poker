@@ -5,9 +5,9 @@ import socket
 
 server_ip = "127.0.0.1"                 # 德州扑克平台地址
 server_port = 2333                      # 德州扑克平台开放端口
-room_number = int(sys.argv[2])          # 一局游戏人数
-name = sys.argv[3]                      # 当前程序的 AI 名字
-game_number = int(sys.argv[4])          # 最大对局数量
+room_number = int(sys.argv[1])          # 一局游戏人数
+name = sys.argv[2]                      # 当前程序的 AI 名字
+game_number = int(sys.argv[3])          # 最大对局数量
 
 
 def get_action(data):
